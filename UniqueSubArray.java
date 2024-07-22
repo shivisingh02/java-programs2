@@ -26,7 +26,7 @@ public class UniqueSubArray {
         {
             if(!list.contains(num[j]))
             {
-            //    sum = sum + num[j];
+             sum = sum + num[j];
                list.add(num[j]);
                if(j - i + 1 == k)
                {
@@ -47,5 +47,33 @@ public class UniqueSubArray {
 
             }
         return maxSum;
+    }
+    public static int count(int num[] , int k)
+    {
+        int i = 0 , j = 0;
+        int count = 0;
+        HashSet<Integer> list = new HashSet<>();
+        while(j < num.length)
+        {
+            if(!list.contains(num[j]))
+            {
+               list.add(num[j]);
+               if(j - i + 1 == k)
+               {
+                list.remove(num[i]);
+                count++;
+                i++;
+               }
+            }
+               else
+               {
+                i = j;
+                list.clear();
+                list.add(num[j]);
+               }
+               j++;
+
+            }
+        return count;
     }
 }
