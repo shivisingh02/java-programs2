@@ -6,8 +6,11 @@ import java.util.*;
 public class Frameworks {
     public static void main(String[] args) {
     Integer arr[] = {1,2,34,3,53,422,43,34,4,544,23,2,4};
-   max2(arr);
+    Integer arr2[] = {2,32,12,2,3,44,32,4,45};
+    max2(arr);
     DuplicateDelete(arr);
+    kSmallestElement(arr2, 4);
+    intersectionList(arr, arr2);
     rotate(arr, 2);
     }
     public static void max2(Integer arr[])
@@ -27,7 +30,7 @@ public class Frameworks {
     System.out.println(set);
     }
 
-    public static void intersection(Integer arr1 , Integer arr2)
+    public static void intersectionList(Integer arr1[] , Integer arr2[])
     {
         List<Integer> list1 = Arrays.asList(arr1);
         List<Integer> list2 = Arrays.asList(arr2);
